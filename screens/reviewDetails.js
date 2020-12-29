@@ -12,10 +12,16 @@ export default function ReviewDetails({navigation}){
     return(
         <View style={globalStyles.container}>
             <Text>
-                Review Details Screen
+                {navigation.getParam('title')}
             </Text>
-            <Button title='back home'
-            onPress={pressHandler}/>
+            <Text>
+                {navigation.getParam('body')}
+            </Text>
+            <Text>
+                {navigation.getParam('rating')}
+            </Text>
+            {/* <Button title='back home'
+            onPress={pressHandler}/> */}
         </View>
     )
 

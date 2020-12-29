@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {StyleSheet,View,Text, Button} from 'react-native'
 import { FlatList, TouchableOpacity } from 'react-native-gesture-handler';
+import Card from '../shared/card';
 import { globalStyles } from '../styles/global';
 
 export default function Home({navigation}){
@@ -27,7 +28,9 @@ export default function Home({navigation}){
             data={reviews}
             renderItem={({item})=>(
                 <TouchableOpacity onPress={()=>navigation.navigate('ReviewDetails',item)}>
+                    <Card>
                     <Text style={globalStyles.titleText}>{item.title}</Text>
+                    </Card>
                 </TouchableOpacity>
             )}
             />

@@ -5,27 +5,16 @@ import ReviewDetails from '../screens/reviewDetails'
 import About from '../screens/about'
 
 const screens = {
-    Home:{
-        screen:Home,
-        navigationOptions:{
-            title:'Game Zone',
-            //headerStyle:{backgroundColor:'#eee'}
-        }
-    },
-    ReviewDetails:{
-        screen:ReviewDetails,
-        navigationOptions:{
-            title:'Review Details',
-            //headerStyle:{backgroundColor:'#eee'}
-
-        }
-    },
     About:{
-        screen:About
-    }
+        screen:About,
+        navigationOptions:{
+            title:'About Game Zone',
+        }
+    },
+  
 }
 
-const HomeStack = createStackNavigator(screens,{
+const AboutStack = createStackNavigator(screens,{
     defaultNavigationOptions:{
         headerTintColor:'#444',
         headerStyle:{backgroundColor:'#eee',
@@ -33,4 +22,4 @@ const HomeStack = createStackNavigator(screens,{
     }
 })
 
-export default HomeStack
+export default AboutStack

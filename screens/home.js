@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import {StyleSheet,View,Text, Button,Modal, Keyboard} from 'react-native'
-import { FlatList, TouchableOpacity, TouchableWithoutFeedback } from 'react-native-gesture-handler';
+import {StyleSheet,View,Text, Button,Modal, Keyboard,FlatList, TouchableOpacity, TouchableWithoutFeedback} from 'react-native'
 import Card from '../shared/card';
 import { globalStyles } from '../styles/global';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -30,11 +29,7 @@ export default function Home({navigation}){
 
     return(
         <View style={globalStyles.container}>
-            {/* <Text style={globalStyles.titleText}>
-                Home Screen Split
-            </Text> */}
-            {/* <Button title='go to dets'
-            onPress={pressHandler}/> */}
+           
             <Modal visible={modalOpen} animationType='slide'>
               <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.modalContent}>
